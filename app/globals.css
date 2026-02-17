@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@plugin '@tailwindcss/typography';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), sans-serif;
+  color: #172538;
+}
+
+.hero-heading {
+  font-family: var(--font-playfair), sans-serif;
+}
+/* -------------------- Lists -------------------- */
+
+/* -------------------- Scroll Bar -------------------- */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2154ff #dee2e6;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1d7eeff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2154ff;
+}
+
+/* -------------------- Theme Variables -------------------- */
+@theme inline {
+  /* Base colors */
+  --color-background: #ffffff;
+  --color-foreground: #ffffff;
+  --color-body: #faf9f5;
+
+  /* Primary */
+  --color-primary: #172538;
+  --color-primary-light: #e5f5f6;
+
+  /* Secondary */
+  --color-secondary: #c3807a;
+
+  /* sections-bg */
+  --color-sectiontheme: #f4f6f8;
+
+  /* borders/cards/divider-bg */
+  --color-bordertheme: #e9edf2;
+
+  /* Custom colors */
+  --color-cardlight: #f6f7f8;
+  --color-heading: #2b2b2b;
+  --color-textbase: #ffffff;
+  --color-textdark: #1d263a;
+  --color-info-100: #fef3c6;
+  --color-red-shade: #f82122;
+  --color-green-shade-100: #dcfce7;
+  --color-green-shade-200: #b9f8cf;
+}
+
+/* -------------------- Global Typography -------------------- */
+@layer base {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-normal;
+  }
+
+  h3 {
+    @apply text-2xl font-medium;
+  }
+
+  h4 {
+    @apply text-xl font-medium;
+  }
+
+  h5 {
+    @apply text-lg font-medium;
+  }
+
+  h6 {
+    @apply text-base font-medium;
+  }
+}
+
+.prose strong {
+  @apply text-inherit;
+}
+.prose blockquote {
+  @apply text-inherit;
+}
+.prose p {
+  @apply text-inherit;
+}
+.prose h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-inherit;
+}
+
+.goog-te-banner-frame {
+  display: none !important;
+}
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+/* Optional: hide tooltip */
+.goog-tooltip {
+  display: none !important;
+}
+
+.goog-tooltip:hover {
+  display: none !important;
+}
+/* Prevent body shift */
+body {
+  top: 0 !important;
+}
