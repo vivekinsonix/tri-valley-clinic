@@ -118,21 +118,21 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
           </h1>
 
           <p className=" mb-10 md:mr-20  md:w-4xl text-md e md:text-primary md:dark:text-primary md:text-xl lg:text-lg">{subHeading}</p>
-          <div className="lg:flex space-y-5 flex-wrap gap-8  w-full text-xl justify-sart   md:text-primary">
+          <div className="lg:flex space-y-5 flex-wrap gap-8  w-full text-xl justify-center md:justify-start   md:text-primary">
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <Mail className="text-secondary" />
                 contact@trivalleyclinic.com
               </div>
             </div>
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <PhoneCall className="text-secondary" />
                 (510) 598-4921
               </div>
             </div>
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <Printer className="text-secondary" />
                 (510) 973-2393
               </div>
