@@ -6,11 +6,11 @@ import { Clock } from 'lucide-react';
 
 export default function ClinicHoursModern() {
   const hours = [
-    { day: 'Monday', time: '9:00 AM – 5:00 PM' },
-    { day: 'Tuesday', time: '9:00 AM – 5:00 PM' },
-    { day: 'Wednesday', time: '9:00 AM – 5:00 PM' },
-    { day: 'Thursday', time: '9:00 AM – 5:00 PM' },
-    { day: 'Friday', time: '9:00 AM – 5:00 PM' },
+    { day: 'Monday', time: '9:30 AM – 5:30 PM' },
+    { day: 'Tuesday', time: '9:30 AM – 5:30 PM' },
+    { day: 'Wednesday', time: '9:30 AM – 5:30 PM' },
+    { day: 'Thursday', time: '9:30 AM – 5:30 PM' },
+    { day: 'Friday', time: '9:30 AM – 5:30 PM' },
     { day: 'Saturday', time: 'Closed', closed: true },
     { day: 'Sunday', time: 'Closed', closed: true },
   ];

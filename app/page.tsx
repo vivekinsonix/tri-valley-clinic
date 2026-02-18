@@ -59,7 +59,7 @@ export default function Home() {
       <ClinicHoursModern />
       <Clients />
       <BlogsHomePage />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </main>
   );
 }
