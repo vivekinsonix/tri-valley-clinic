@@ -3,6 +3,9 @@
 @source "../.flowbite-react/class-list.json";
 @plugin '@tailwindcss/typography';
 
+html {
+  font-family: var(--font-inter), sans-serif;
+}
 h1,
 h2,
 h3,

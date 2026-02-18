@@ -18,9 +18,9 @@ export default function ClinicHoursModern() {
   return (
     <section className="relative">
       <div className="container mx-auto px-4 md:px-0 ">
-        <Card className="rounded-3xl border-0 shadow-none bg-transparent ">
+        <Card className="rounded-3xl border-0 shadow-none bg-transparent dark:bg-transparent hover:dark:!sectiontheme">
           {/* Header */}
-          <div className="md:flex flex-wrap items-center justify-end mb-10">
+          <div className="md:flex flex-wrap items-center md:justify-end mb-10">
             <Badge color="success" className="text-sm px-4 py-1 rounded-full">
               Open on Weekdays
             </Badge>

@@ -46,12 +46,12 @@ const customTheme = createTheme({
       default: 'bg-primary rounded-sm  border-primary dark:text-white border-0  text-white hover:bg-primary/90 cursor-pointer dark:bg-primary focus:ring-none hover:scale-100 ' + 'dark:bg-primary dark:hover:bg-primary/90 dark:focus:ring-none',
     },
     outlineColor: {
-      default: ' bg-sectiontheme hover:bg-bordertheme  rounded-sm   text-primary  border rounded-0   hover:text-accent focus:ring-primary-300  dark:border-primary dark:text-primary  hover:scale-100 dark:hover:border-accent dark:hover:bg-bordertheme cursor-pointer dark:hover:text-white ',
+      default: ' bg-sectiontheme hover:bg-bordertheme  rounded-sm   text-primary  border rounded-0   hover:text-accent focus:ring-primary-300  dark:border-primary dark:text-primary  hover:scale-100 dark:hover:border-accent dark:hover:bg-bordertheme cursor-pointer dark:hover:text-primary ',
     },
   },
   card: {
     root: {
-      base: 'flex rounded-lg border-0  bg-primary-50 dark:bg-primary-50 shadow-md dark:border-gray-700',
+      base: 'flex rounded-lg  border-1 !hover:bg-white border-bordertheme bg-white dark:bg-white dark:hover:!bg-sectiontheme shadow-md dark:border-bordertheme',
       children: 'flex h-full flex-col justify-center gap-4 p-0',
       horizontal: {
         off: 'flex-col',

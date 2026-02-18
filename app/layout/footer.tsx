@@ -197,9 +197,6 @@ export default function Footer() {
           <p className="text-gray-300 mb-1">TRI-VALLEY CLINIC</p>
           <p>680 Mowry Avenue Fremont, CA 94536</p>
         </div>
-        <div className="block md:hidden mx-auto">
-          <img src="/logo/solicators.png" alt="insonix" width="250" className=" mb-2  rounded-xl" />
-        </div>
       </div>
 
       {/* LOWER SECTION */}

@@ -15,11 +15,11 @@ import ThemeWrapper from './theme';
 
 // ====== FONTS ======
 
-const comfortaa = Comfortaa({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-sans',
-});
+// const comfortaa = Comfortaa({
+//   subsets: ['latin'],
+//   weight: ['300', '400', '500', '600', '700'],
+//   variable: '--font-sans',
+// });
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -57,18 +57,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       suppressHydrationWarning
       className={`
-        ${comfortaa.variable}
+       ${inter.variable}   
+        
         ${libreBaskerville.variable}
         ${montserrat.variable}
         ${playfair.variable}
-        ${inter.variable}   
+    
       `}
     >
       <head>
         <ThemeModeScript mode="light" />
       </head>
 
-      <body className="font-sans bg-white dark:bg-primary">
+      <body className="font-inter bg-white dark:bg-primary">
         <DrawerProvider>
           <ThemeWrapper>
             <ThemeInit />

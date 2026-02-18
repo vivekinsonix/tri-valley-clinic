@@ -92,7 +92,7 @@ export default function PartnerAdvisoryCouncil() {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 items-center text-left gap-20 lg:grid-cols-12">
               {/* LEFT CONTENT */}
-              <div className="col-span-5">
+              <div className="md:col-span-5">
                 {loading ? (
                   <>
                     <div className="h-8 w-72 bg-gray-200 rounded animate-pulse" />
@@ -118,7 +118,7 @@ export default function PartnerAdvisoryCouncil() {
               </div>
 
               {/* RIGHT GRID */}
-              <div className=" col-span-7 ">
+              <div className=" md:col-span-7 ">
                 <ClinicHoursModern />
                 {/* {loading
                   ? Array.from({ length: 6 }).map((_, i) => <ImageSkeleton key={i} />)

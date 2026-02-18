@@ -1,7 +1,7 @@
 'use client';
 
 import { get_case_studies_paginated } from '@/app/services/homePageService';
-import { Button } from 'flowbite-react';
+import { Button, Card } from 'flowbite-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 type CaseStudy = {
@@ -97,26 +97,20 @@ export default function ServicesType() {
                 const caseStudyDescription = item?.main?.sub_title || 'Case Study';
                 const caseStudyImage = item?.main?.cover_image?.url || '';
                 return (
-                  <Link key={idx} href={caseStudyUrl} title={caseStudyTitle} className="group w-[100%] h-[350px] relative overflow-hidden shadow-lg cursor-pointer block">
-                    {/* Background Image */}
-                    <div className="absolute inset-0 bg-cover bg-center transition-transform blur-none group-hover:blur-none duration-500 group-hover:scale-110" style={{ backgroundImage: `url(${caseStudyImage})` }}></div>
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-linear-to-b from-primary/50 to-black  dark:to-black/90 group-hover:bg-black/20 transition-all duration-500" />
-
-                    {/* Content */}
-                    <div className="relative text-left  h-full flex flex-col items-center justify-end text-white group-hover:text-white  p-6 ">
-                      <div></div>
-                      <div className="text-left w-full">
-                        <h2>{caseStudyTitle}</h2>
-                        <p className="text-lg my-3 line-clamp-2">{caseStudyDescription}</p>
-                      </div>
-
-                      <div className="w-full flex justify-start mb-3">
-                        <Button outline>Explore Service</Button>
-                      </div>
+                  <Card key={idx} href={caseStudyUrl} title={caseStudyTitle} className={`p-6  text-center transition-all duration-300 rounded-2xl`}>
+                    <div className="mb-4 flex justify-center">
+                      <img src="/service/brainstorm.png" className="w-10" />
                     </div>
-                  </Link>
+
+                    <h3 className="text-xl font-semibold text-accent dark:text-accent">{caseStudyTitle}</h3>
+
+                    <p className="mt-3 text-accent dark:text-accent line-clamp-2 text-sm leading-relaxed">{caseStudyDescription}</p>
+                    <div className="mx-auto">
+                      <Button outline size="md">
+                        Learn More
+                      </Button>
+                    </div>
+                  </Card>
                 );
               })}
             </div>

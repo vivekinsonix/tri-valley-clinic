@@ -79,12 +79,12 @@ export default function About({ ourLegacy, coreDifferentiars, loading }: Props) 
               <RichTextViewer content={ourLegacy?.paragraph_1} />
             </article>
             <div className="md:flex flex-wrap gap-2 justify-center">
-              <Link target="_blank" href="#">
+              <Link target="_blank" href="/contact">
                 <Button size="lg" className="mx-auto md:mb-0 mb-10">
                   Request Appointment
                 </Button>
               </Link>
-              <Link target="_blank" href="#">
+              <Link target="_blank" href="tel:(510) 598-4921">
                 <Button outline size="lg" className="mx-auto">
                   Call/Text (510) 598-4921
                 </Button>
