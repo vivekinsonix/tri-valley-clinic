@@ -100,14 +100,14 @@ const Header: React.FC = () => {
         {/* Mobile Menu */}
         <NavbarCollapse className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden text-center px-3`}>
           <CaseStudiesDropdown openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} setIsMenuOpen={() => setIsMenuOpen(false)} />
-       
 
           <Link href="/doctors" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
             Doctors
           </Link>
-                <Link href="/#teams" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
-              Clinic Hours
-            </Link>
+          <Link href="/#teams" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
+            Clinic Hours
+          </Link>
+
           <Link href="/blogs" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
             Blogs
           </Link>
