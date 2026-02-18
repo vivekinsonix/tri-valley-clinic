@@ -31,7 +31,6 @@ export default function ClinicHoursModern() {
             {hours.map((item, index) => (
               <div key={index} className="flex items-center justify-between py-3 border-b border-bordertheme last:border-b-0">
                 <span className="text-primary font-medium tracking-wide">{item.day}</span>
-
                 <span className={` font-bold ${item.closed ? 'text-secondary' : 'text-primary'}`}>{item.time}</span>
               </div>
             ))}
