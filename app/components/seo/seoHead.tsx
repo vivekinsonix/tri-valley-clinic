@@ -11,14 +11,7 @@ interface SeoProps {
   author?: string;
 }
 
-export default function SeoHead({
-  title = 'Legal Practice - Leading Patent Analytics Company',
-  description = '60 YEARS OF TRUSTED LEGAL SERVICE',
-  keywords = 'Legal Fees and Pricing, Legal Fee Structures, Legal Billing Models, Legal Cost Management, Legal Pricing Strategies, Legal Fee Transparency, Legal Fee Comparison, Legal Fee Trends, Legal Fee Analysis, Legal Fee Optimization , Legal Fee Negotiation, Legal Fee Forecasting, Legal Fee Benchmarking, Legal Fee Insights, Legal Fee Solutions, Legal Fee Consultation, Legal Fee Resources, Legal Fee Guides, Legal Fee Articles',
-  image = SEO_IMAGE,
-  url = ALTERNATE_UI_URL,
-  author = 'Legal Practice Team',
-}: SeoProps) {
+export default function SeoHead({ title = 'Private Psychiatry & Weight Management | Tri-Valley Clinic Fremont', description = 'Physician-led psychiatry and medical weight management in Fremont, CA. Personalized, evidence-based care in a private clinical setting', keywords = '', image = SEO_IMAGE, url = ALTERNATE_UI_URL, author = 'TRI-VALLEY CLINIC' }: SeoProps) {
   return (
     <Head>
       <title>{title}</title>

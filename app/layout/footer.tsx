@@ -17,14 +17,14 @@ const FollowIcons = React.memo(() => {
   return (
     <div className="flex gap-3 text-xl">
       <Tooltip className=" shadow-lg" content="Facebook" placement="top">
-        <FacebookIcon className="w-7 h-7 cursor-pointer hover:scale-130 text-white" onClick={() => openLink('https://www.facebook.com/people/The-Legal-Practice-Solicitors/')} />
+        <FacebookIcon className="w-7 h-7 cursor-pointer hover:scale-130 text-white" onClick={() => openLink('https://www.facebook.com')} />
       </Tooltip>
 
       <Tooltip className="shadow-lg" content="Instagram" placement="top">
-        <Instagram className="w-7 h-7 cursor-pointer text-white hover:scale-130" onClick={() => openLink('https://www.instagram.com/thelegalpractice?igsh=NnFwdmp4N2VkYmpx')} />
+        <Instagram className="w-7 h-7 cursor-pointer text-white hover:scale-130" onClick={() => openLink('https://www.instagram.com')} />
       </Tooltip>
       <Tooltip className="shadow-lg" content="Linkedin" placement="top">
-        <Linkedin className="w-7 h-7 cursor-pointer text-white hover:scale-130" onClick={() => openLink('https://www.linkedin.com/company/888468/admin/dashboard/')} />
+        <Linkedin className="w-7 h-7 cursor-pointer text-white hover:scale-130" onClick={() => openLink('https://www.linkedin.com')} />
       </Tooltip>
     </div>
   );

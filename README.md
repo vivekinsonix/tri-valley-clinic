@@ -1,6 +1,6 @@
-# LEGAL PRACTICE-UI-NEXT
+# TRI-VALLEY CLINIC-UI-NEXT
 
-A Next.js (App Router) project for the LEGAL PRACTICE UI built with TypeScript and modern React patterns. This repo contains the application source under the `app/` directory and several services, components, and utilities used across the site.
+A Next.js (App Router) project for TRI-VALLEY CLINIC UI built with TypeScript and modern React patterns. This repo contains the application source under the `app/` directory and several services, components, and utilities used across the site.
 
 ## Features
 

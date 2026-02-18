@@ -1,6 +1,6 @@
 'use client';
 
-export const ALTERNATE_UI_URL = 'https://legalpractice.insonix.com';
+export const ALTERNATE_UI_URL = 'https://trivalleyclinic.com';
 export const SEO_IMAGE = '/logo/solicators.png';
 export const countryFlags: Record<string, string> = {
   India: 'https://flagcdn.com/w320/in.png',
