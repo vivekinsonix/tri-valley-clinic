@@ -163,14 +163,13 @@ export default function BlogDetailClient({ initialBlog, slug, preview }: BlogDet
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      {!loading && <ShareBanner shareUrl={seoData?.seoCanonical} position="center" />}
+    <div className="min-h-screen bg-white text-slate-900 dark:bg-primary dark:text-white">
       <SeoHead title={seoData.seoTitle} description={seoData.seoDescription} keywords={seoData.seoKeywords} image={seoData.imageUrl} url={seoData.seoCanonical} />
 
-      <section className="mt-10 py-16 " aria-labelledby="blog-title">
-        <article className="container mx-auto max-w-7xl px-6 prose dark:prose-invert">
+      <section className="mt-10 py-16 dark:bg-white    dark:text-primary" aria-labelledby="blog-title">
+        <article className="mx-auto px-6 ">
           <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-12 lg:grid-cols-12 container mx-auto">
-            <div className="md:col-span-9">
+            <div className="lg:col-span-9 col-span-7">
               <header className="mb-8">
                 <h1 className="mb-4 text-3xl font-bold md:text-4xl">{blog.title}</h1>
                 {blog.excerpt && <p className="text-lg leading-relaxed">{blog.excerpt}</p>}
@@ -180,7 +179,7 @@ export default function BlogDetailClient({ initialBlog, slug, preview }: BlogDet
                 <Image src={seoData.imageUrl} alt={blog.title} width={1200} height={600} className="w-full rounded-xl object-cover shadow-xl" priority />
               </figure>
 
-              <div className="prose max-w-none prose-lg dark:prose-invert">{renderedContent}</div>
+              <div className="prose max-w-none prose-lg ">{renderedContent}</div>
 
               {blog?.video?.[0]?.url && <video src={blog.video[0].url} className="mt-10 w-full rounded-xl" autoPlay muted loop playsInline />}
 
@@ -228,7 +227,7 @@ export default function BlogDetailClient({ initialBlog, slug, preview }: BlogDet
                           />
                         </div>
                       ) : (
-                        <div className="relative flex flex-col items-center rounded-2xl bg-white p-8 text-center shadow-md transition-all hover:scale-110 hover:shadow-xl ">
+                        <div className="relative flex flex-col items-center rounded-2xl bg-white p-8 text-center shadow-md transition-all hover:scale-110 hover:shadow-xl dark:bg-secondary-dark">
                           <span className="absolute top-4 right-4 rounded-full bg-blue-100 px-2 py-1 text-xs text-blue-600">{badge}</span>
 
                           <h3 className="mb-3 text-2xl font-semibold">
@@ -267,6 +266,11 @@ export default function BlogDetailClient({ initialBlog, slug, preview }: BlogDet
                 })}
               </div>
             </div>
+            {!loading && (
+              <div className="col-span-5 lg:col-span-3 absolute md:relative md:block ">
+                <ShareBanner shareUrl={seoData?.seoCanonical} position="center" />
+              </div>
+            )}
           </div>
         </article>
       </section>
