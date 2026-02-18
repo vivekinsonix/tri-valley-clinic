@@ -52,7 +52,7 @@ const customTheme = createTheme({
   card: {
     root: {
       base: 'flex rounded-lg  border-1 !hover:bg-white border-bordertheme bg-white dark:bg-white dark:hover:!bg-sectiontheme shadow-md dark:border-bordertheme',
-      children: 'flex h-full flex-col justify-center gap-4 p-0',
+      children: 'flex h-full flex-col justify-center gap-2 p-3',
       horizontal: {
         off: 'flex-col',
         on: 'flex-col md:max-w-xl md:flex-row',

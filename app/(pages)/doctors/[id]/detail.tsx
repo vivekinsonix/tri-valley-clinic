@@ -2,7 +2,7 @@
 
 import { RichTextViewer } from '@/app/components/richtext/RichTextViewer';
 import { getEmployee, getEmployeeBySlug } from '@/app/services/teamService';
-import { Avatar } from 'flowbite-react';
+import { Avatar, Card } from 'flowbite-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -62,28 +62,30 @@ export default function Detail({ slug }: any) {
   const bgColor = getColorForName(data?.name);
   return (
     <section className="min-h-screen w-full dark:bg-foreground ">
-      <main className="container mx-auto max-w-7xl px-4 py-10 prose">
+      <main className="container mx-auto max-w-7xl px-4 py-10 ">
         <header className="my-20 text-center"></header>
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 lg:grid-cols-12 container  mx-auto">
-          <div className="md:col-span-3 text-center ">
-            {data?.image?.url ? <Avatar img={data.image.url} rounded size="xl" className="mb-2" /> : <div className={`w-35 h-35 flex items-center mx-auto justify-center rounded-full text-white text-3xl font-bold mb-2 ${bgColor}`}>{initial}</div>}
-            <h3 className="mt-0 mb-0">{data?.name}</h3>
-            <p className=" text-gray-400">{data?.role}</p>
-            {/* Social Links */}
-            <div className="flex justify-center">
-              {data?.social_links?.map((e: any) => (
-                <Link key={e?.id} href={e?.link || '#'} target="_blank" className="my-2 mx-auto">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: e?.icon || '',
-                    }}
-                  />
-                </Link>
-              ))}
-            </div>
+          <div className="md:col-span-3 text-center">
+            <Card>
+              {data?.image?.url ? <Avatar img={data.image.url} rounded size="xl" className="my-2" /> : <div className={`w-35 h-35 flex items-center mx-auto justify-center rounded-full text-white text-3xl font-bold mb-2 ${bgColor}`}>{initial}</div>}
+              <h4 className="mt-0 mb-0">{data?.name}</h4>
+              <p className=" text-gray-400">{data?.role}</p>
+              {/* Social Links */}
+              <div className="flex justify-center">
+                {data?.social_links?.map((e: any) => (
+                  <Link key={e?.id} href={e?.link || '#'} target="_blank" className="my-2 mx-auto">
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: e?.icon || '',
+                      }}
+                    />
+                  </Link>
+                ))}
+              </div>
+            </Card>
           </div>
-          <div className="md:col-span-9">
+          <div className="md:col-span-9 prose">
             <RichTextViewer content={data?.description || ''} />
           </div>
         </div>
