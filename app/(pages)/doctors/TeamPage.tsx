@@ -111,7 +111,7 @@ export default function TeamPage() {
                       {/* Designation */}
                       <p className="text-gray-600">{member?.role}</p>
 
-                      <Link className="mx-auto mt-2" href={`/teams/${member?.slug}`}>
+                      <Link className="mx-auto mt-2" href={`/doctors/${member?.slug}`}>
                         <Button outline size="md">
                           Learn More
                         </Button>
