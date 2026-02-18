@@ -6,6 +6,7 @@ import SeoHead from '@/app/components/seo/seoHead';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import ClinicHoursModern from '../hours/ClinicHours';
 
 /**
  * In-memory cache
@@ -72,24 +73,8 @@ export default function PartnerAdvisoryCouncil() {
     <>
       <SeoHead title="Our Team & Advisors - Dolcera" description="Meet Dolcera's expert team and advisory council." keywords="Dolcera team, advisors, patent experts" url={`${typeof window !== 'undefined' ? window.location.origin : ''}/teamshome`} />
 
-      <section id="teams" className="relative overflow-hidden">
-        <div className="relative text-center mx-auto py-24 px-4">
-          {!loading && Array.isArray(teams?.card) && teams?.card?.length > 0 && (
-            <div className="absolute inset-0 -z-20">
-              <Image src="/bg-teams.png" alt="Background" fill className="object-cover dark:brightness-110 dark:contrast-110" priority />
-            </div>
-          )}
-
-          <div
-            className="
-              absolute inset-0 -z-10
-              bg-gradient-to-r
-              from-white/90 via-white/75 to-white/60
-              dark:from-black/70 dark:via-black/50 dark:to-black/30
-            "
-          />
-
-          {/* HEADER */}
+      <section id="teams" className="  py-24 relative overflow-hidden bg-sectiontheme">
+        <div className="relative text-center mx-auto px-4">
           {loading ? (
             <>
               <div className="mx-auto mb-2 w-40 h-4 bg-gray-200 rounded animate-pulse" />
@@ -105,9 +90,9 @@ export default function PartnerAdvisoryCouncil() {
           ) : null}
 
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 items-center text-left gap-20 lg:grid-cols-2">
+            <div className="grid grid-cols-1 items-center text-left gap-20 lg:grid-cols-12">
               {/* LEFT CONTENT */}
-              <div>
+              <div className="col-span-5">
                 {loading ? (
                   <>
                     <div className="h-8 w-72 bg-gray-200 rounded animate-pulse" />
@@ -133,11 +118,12 @@ export default function PartnerAdvisoryCouncil() {
               </div>
 
               {/* RIGHT GRID */}
-              <div className="grid grid-cols-3 gap-10">
-                {loading
+              <div className=" col-span-7 ">
+                <ClinicHoursModern />
+                {/* {loading
                   ? Array.from({ length: 6 }).map((_, i) => <ImageSkeleton key={i} />)
                   : advisors?.map((advisor: any, i) => {
-                      /** Normalize image */
+                     
                       const rawImg = advisor?.image;
 
                       const img = typeof rawImg === 'string' ? rawImg : (rawImg?.url ?? null);
@@ -152,7 +138,7 @@ export default function PartnerAdvisoryCouncil() {
                           {hasImage ? <Image src={img} alt="Advisor" fill className="object-cover" /> : <div className={`w-full h-full flex items-center justify-center text-white text-3xl font-bold ${colorClass}`}>{letter}</div>}
                         </div>
                       );
-                    })}
+                    })} */}
               </div>
             </div>
           </div>

@@ -18,10 +18,10 @@ const Logo = ({ scrolled }: { scrolled: boolean }) => {
   return (
     <NavbarBrand as={Link} href="/">
       {/* Default Logo (before scroll) */}
-      <Image src="/logo/tri-valley-clinic-logo.jpg" width={150} height={40} alt="Logo" className={`transition-all hidden md:flex duration-300 ease-in-out ${scrolled ? 'opacity-0 md:absolute' : 'md:opacity-100 opacity-0'}`} />
+      <Image src="/logo/tri-valley-clinic-logo.jpg" width={140} height={40} alt="Logo" className={`transition-all hidden md:flex duration-300 ease-in-out ${scrolled ? 'opacity-0 md:absolute' : 'md:opacity-100 opacity-0'}`} />
 
       {/* Logo shown when scrolled */}
-      <Image src="/logo/tri-valley-clinic-logo.jpg" width={150} height={40} alt="Scrolled Logo" className={`transition-all duration-300 ease-in-out ${scrolled ? 'opacity-100' : 'md:opacity-0 opacity-100 md:absolute'}`} />
+      <Image src="/logo/tri-valley-clinic-logo.jpg" width={140} height={40} alt="Scrolled Logo" className={`transition-all duration-300 ease-in-out ${scrolled ? 'opacity-100' : 'md:opacity-0 opacity-100 md:absolute'}`} />
     </NavbarBrand>
   );
 };
@@ -64,8 +64,11 @@ const Header: React.FC = () => {
           <div className="hidden md:flex gap-8 items-center">
             <CaseStudiesDropdown openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} setIsMenuOpen={() => setIsMenuOpen(false)} />
 
-            <Link href="/#teams" className={` ${navTextColor} hover:text-secondary`}>
+            <Link href="/teams" className={` ${navTextColor} hover:text-secondary`}>
               Doctors
+            </Link>
+            <Link href="/#teams" className={` ${navTextColor} hover:text-secondary`}>
+              Clinic Hours
             </Link>
             {/* <ClientInfo openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} setIsMenuOpen={() => setIsMenuOpen(false)} /> */}
             {/* <Link href="/#clients" className={` ${navTextColor} hover:text-primary`}>
@@ -101,7 +104,7 @@ const Header: React.FC = () => {
             Projects
           </Link>
 
-          <Link href="/#teams" className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
+          <Link href="/teams" className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
             Doctors
           </Link>
           <Link href="/blogs" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>

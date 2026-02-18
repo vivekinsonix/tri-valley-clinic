@@ -136,9 +136,9 @@ export default function BlogsHomePage() {
         <section className="w-full py-16 md:py-24 bg-primary-50 dark:bg-foreground ">
           <div className="container mx-auto text-center">
             <header>
-              <p className="text-sm font-medium uppercase tracking-wider mb-2 text-gray-800 dark:text-gray-400">The Legal Practice Insights</p>
+              <p className="text-sm font-medium uppercase tracking-wider mb-2 text-gray-800 dark:text-gray-400">TRI-VALLEY CLINIC</p>
 
-              <h1>Thoughts on the Digital Horizon</h1>
+              <h1>Our Recent Blogs</h1>
             </header>
             <main className="container mx-auto max-w-full px-4 py-10">
               <div className="grid md:grid-cols-8 gap-6">

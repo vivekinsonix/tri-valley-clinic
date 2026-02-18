@@ -54,9 +54,7 @@ export default function Home() {
       {/* <ProjectsHome /> */}
 
       <ServicesType />
-
       <PartnerAdvisoryCouncil />
-      <ClinicHoursModern />
       <Clients />
       <BlogsHomePage />
       {/* <Testimonials /> */}

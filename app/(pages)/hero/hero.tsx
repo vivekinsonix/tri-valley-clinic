@@ -85,7 +85,7 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
         onContextMenu={(e) => e.preventDefault()}
         className="relative flex min-h-125 md:min-h-140
              items-center justify-start overflow-hidden
-             pt-24 pb-12 text-center"
+             md:pt-24 pb-12 pt-32  text-center"
       >
         {/* <video
           ref={videoRef}
@@ -108,17 +108,17 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
           style={{ backgroundImage: "url('/hero-banner.jpg')" }}
         />
 
-        <div className="absolute inset-0 bg-black/60 dark:bg-black/60 md:bg-black/10 md:dark:bg-black/10 pointer-events-none" />
+        <div className="absolute inset-0 bg-sectiontheme/90 dark:bg-sectiontheme/90 md:bg-black/10 md:dark:bg-black/10 pointer-events-none" />
 
-        <div className="relative container mx-auto px-4 py-10 md:px-0  md:text-left ">
-          <h1 className="mb-6 text-xl text-white dark:text-white  md:text-primary leading-tight hero-heading md:dark:text-primary md:text-3xl lg:text-3xl">
+        <div className="relative container mx-auto px-4  md:px-0  md:text-left ">
+          <h1 className="mb-6 text-xl e  md:text-primary leading-tight hero-heading md:dark:text-primary md:text-3xl lg:text-3xl">
             {heading?.split('Mission')[0]}
             <span className="text-secondary">Mission</span>
             {heading?.split('Mission')[1]}
           </h1>
 
-          <p className=" mb-10 md:mr-20  md:w-4xl text-md text-white md:text-primary md:dark:text-primary md:text-xl lg:text-lg">{subHeading}</p>
-          <div className="lg:flex space-y-5 flex-wrap gap-8  w-full text-xl justify-sart  text-white md:text-primary">
+          <p className=" mb-10 md:mr-20  md:w-4xl text-md e md:text-primary md:dark:text-primary md:text-xl lg:text-lg">{subHeading}</p>
+          <div className="lg:flex space-y-5 flex-wrap gap-8  w-full text-xl justify-sart   md:text-primary">
             <div>
               <div className="flex items-center gap-2">
                 <Mail className="text-secondary" />
