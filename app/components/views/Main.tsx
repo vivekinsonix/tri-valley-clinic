@@ -65,22 +65,22 @@ export const MAIN = ({ content, loading }: { content: any; loading: boolean }) =
       <SeoHead title={seoData.title} description={seoData.description} keywords={seoData.keywords} url={seoData.url} image={seoData.image} />
 
       {/* --------------------- HERO SECTION ------------------ */}
-      <section className="relative isolate overflow-hidden pt-24 dark:bg-primary">
+      <section className="relative isolate bg-sectiontheme overflow-hidden pt-24 dark:bg-primary">
         {/* Background image */}
         {imageUrl ? (
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <Image src={imageUrl} alt={title || 'Background Image'} fill priority={true} className="object-cover" />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-white dark:bg-primary opacity-70" />
+            <div className="absolute inset-0 bg-sectiontheme dark:bg-primary opacity-70" />
           </div>
         ) : (
-          <div className="absolute inset-0 -z-10 bg-white dark:bg-primary" />
+          <div className="absolute inset-0 -z-10 bg-sectiontheme dark:bg-primary" />
         )}
 
         {/* Content */}
-        <div className="mx-auto container md:px-0 px-4  dark:text-white  py-8">
+        <div className="mx-auto container md:px-0 px-4  dark:!text-white  py-8">
           {/* Title */}
-          {title && <h1>{title}</h1>}
+          {title && <h1 className="dark:!text-white">{title}</h1>}
 
           {/* Subtitle */}
           {sub_title && <p className="mt-4  text-lg dark:text-white/90">{sub_title}</p>}
