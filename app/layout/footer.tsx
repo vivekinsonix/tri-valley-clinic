@@ -113,13 +113,13 @@ export default function Footer() {
 
   return (
     <footer className="dark:bg-primary bg-primary dark:text-white pt-16 pb-10">
-      <div className="container mx-auto md:px-0 px-2 grid grid-cols-1 md:grid-cols-4 gap-20">
+      <div className="container mx-auto md:px-0 px-4 grid grid-cols-1 md:grid-cols-4 gap-20">
         <div className="flex flex-col gap-4">
           <div className="flex items-center md:justify-start justify-center gap-3 mt-0">
             <div>
               <div className="mb-2"></div>
-              <img src="/logo/tri-valley-clinic-footer.jpg" alt="trv" width="150" className=" mb-2 dark:hidden " />
-              <img src="/logo/tri-valley-clinic-footer.jpg" alt="tvc" width="150" className=" mb-2 hidden dark:block " />
+              <img src="/logo/tri-valley-clinic-footer.jpg" alt="trv" width="130" className=" mb-2 dark:hidden " />
+              <img src="/logo/tri-valley-clinic-footer.jpg" alt="tvc" width="130" className=" mb-2 hidden dark:block " />
               <p className="text-gray-300 mb-0 text-md leading-relaxed ">{footerData?.title}</p>
             </div>
           </div>

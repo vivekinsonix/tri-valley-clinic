@@ -85,7 +85,7 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
         onContextMenu={(e) => e.preventDefault()}
         className="relative flex 
              items-center justify-start overflow-hidden bg-sectiontheme
-           mt-22"
+           mt-20"
       >
         {/* <video
           ref={videoRef}
