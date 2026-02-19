@@ -18,10 +18,10 @@ const Logo = ({ scrolled }: { scrolled: boolean }) => {
   return (
     <NavbarBrand as={Link} href="/">
       {/* Default Logo (before scroll) */}
-      <Image src="/logo/tri-valley-clinic-logo.jpg" width={140} height={40} alt="Logo" className={`transition-all hidden md:flex duration-300 ease-in-out ${scrolled ? 'opacity-0 md:absolute' : 'md:opacity-100 opacity-0'}`} />
+      <Image src="/logo/tri-valley-clinic-logo.png" width={140} height={40} alt="Logo" className={`transition-all hidden md:flex duration-300 ease-in-out ${scrolled ? 'opacity-0 md:absolute' : 'md:opacity-100 opacity-0'}`} />
 
       {/* Logo shown when scrolled */}
-      <Image src="/logo/tri-valley-clinic-logo.jpg" width={140} height={40} alt="Scrolled Logo" className={`transition-all duration-300 ease-in-out ${scrolled ? 'opacity-100' : 'md:opacity-0 opacity-100 md:absolute'}`} />
+      <Image src="/logo/tri-valley-clinic-logo.png" width={140} height={40} alt="Scrolled Logo" className={`transition-all duration-300 ease-in-out ${scrolled ? 'opacity-100' : 'md:opacity-0 opacity-100 md:absolute'}`} />
     </NavbarBrand>
   );
 };
