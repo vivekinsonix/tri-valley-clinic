@@ -111,7 +111,7 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
         {/* <div className="absolute inset-0 bg-sectiontheme/90 dark:bg-sectiontheme/90 md:bg-black/10 md:dark:bg-black/10 pointer-events-none" /> */}
         <div className="container mx-auto ">
           <div className=" grid grid-cols-1 gap-10 md:grid-cols-2 flex items-center lg:grid-cols-12 w-full">
-            <div className="lg:col-span-7 col-span-12">
+            <div className="lg:col-span-7 col-span-11">
               <div className=" w-full p-10 relative">
                 {/* Top Divider */}
                 <div className="w-full absolute left-0 h-16 bg-left bg-no-repeat" style={{ backgroundImage: "url('/service/top.png')" }}></div>
@@ -122,7 +122,7 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
                 </h1>
 
                 {/* Paragraph */}
-                <p className="w-full font-weight-[300] text-primary ">{subHeading}</p>
+                <p className="w-full  text-primary ">{subHeading}</p>
 
                 {/* Contact Details */}
                 <div className="space-y-3 mt-6 text-primary  ">

@@ -33,11 +33,11 @@ export default function ClinicHoursModern() {
         </Badge>
       </div>
       {/* Hours Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-5 px-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-5 px-4 ">
         {hours.map((item, index) => (
-          <div key={index} className="flex items-center justify-between py-3 border-b border-bordertheme last:border-b-0">
+          <div key={index} className="flex items-center justify-between text-sm py-3 border-b border-bordertheme last:border-b-0">
             <span className="text-primary tracking-wide">{item.day}</span>
-            <span className={` ${item.closed ? 'text-secondary' : 'text-primary'}`}>{item.time}</span>
+            <span className={` ${item.closed ? 'text-secondary' : 'text-primary whitespace-nowrap truncate'}`}>{item.time}</span>
           </div>
         ))}
       </div>
