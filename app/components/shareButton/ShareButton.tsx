@@ -13,7 +13,7 @@ type ShareBannerProps = {
 };
 
 export default function ShareBanner({ shareUrl, position = 'center' }: ShareBannerProps) {
-  const [open, setOpen] = useState(false); // default closed
+  const [open, setOpen] = useState(false); 
   const [email, setEmail] = useState('');
   const [isVisible, setIsVisible] = useState(false);
 

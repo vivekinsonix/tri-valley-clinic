@@ -1,7 +1,7 @@
 'use client';
 
 import SeoHead from '@/app/components/seo/seoHead';
-import { Button } from 'flowbite-react';
+import { Button, HRText } from 'flowbite-react';
 import { useEffect, useRef } from 'react';
 import About from './about';
 import { ALTERNATE_UI_URL, SEO_IMAGE } from '@/app/constants/appconstants';
@@ -83,9 +83,9 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
         onContextMenu={(e) => e.preventDefault()}
-        className="relative flex min-h-125 md:min-h-140
-             items-center justify-start overflow-hidden
-             md:pt-24 pb-12 pt-32  text-center"
+        className="relative flex 
+             items-center justify-start overflow-hidden bg-sectiontheme
+           mt-22"
       >
         {/* <video
           ref={videoRef}
@@ -101,50 +101,64 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
         </video> */}
 
         {/* Background Image */}
-        <div
+        {/* <div
           className="absolute inset-0 w-full h-[120%] 
                bg-auto bg-right bg-no-repeat  
                will-change-transform"
           style={{ backgroundImage: "url('/hero-banner.jpg')" }}
-        />
+        /> */}
 
-        <div className="absolute inset-0 bg-sectiontheme/90 dark:bg-sectiontheme/90 md:bg-black/10 md:dark:bg-black/10 pointer-events-none" />
+        {/* <div className="absolute inset-0 bg-sectiontheme/90 dark:bg-sectiontheme/90 md:bg-black/10 md:dark:bg-black/10 pointer-events-none" /> */}
+        <div className="container mx-auto ">
+          <div className=" grid grid-cols-1 gap-10 md:grid-cols-2 flex items-center lg:grid-cols-12 w-full">
+            <div className="lg:col-span-7 col-span-12">
+              <div className=" w-full p-10 relative">
+                {/* Top Divider */}
+                <div className="w-full absolute left-0 h-16 bg-left bg-no-repeat" style={{ backgroundImage: "url('/service/top.png')" }}></div>
 
-        <div className="relative container mx-auto px-4  md:px-0  md:text-left ">
-          <h1 className="mb-6 text-xl e  md:text-primary leading-tight hero-heading md:dark:text-primary md:text-3xl lg:text-3xl">
-            {heading?.split('Mission')[0]}
-            <span className="text-secondary">Mission</span>
-            {heading?.split('Mission')[1]}
-          </h1>
+                {/* Heading */}
+                <h1 className="text-2xl md:text-3xl font-serif text-primary mb-4 flex items-center gap-2">
+                  <span className="text-secondary font-semibold">Our</span> Mission
+                </h1>
 
-          <p className=" mb-10 md:mr-20  md:w-4xl text-md e md:text-primary md:dark:text-primary md:text-xl lg:text-lg">{subHeading}</p>
-          <div className="lg:flex space-y-5 flex-wrap gap-8  w-full text-xl justify-center md:justify-start   md:text-primary">
-            <div>
-              <div className="flex items-center justify-center gap-2">
-                <Mail className="text-secondary" />
-                contact@trivalleyclinic.com
+                {/* Paragraph */}
+                <p className="w-full font-serif text-primary leading-relaxed">{subHeading}</p>
+
+                {/* Contact Details */}
+                <div className="space-y-3 mt-6 text-primary font-serif text-[16px]">
+                  <div className="flex items-center gap-2">
+                    <Mail className="text-secondary" />
+                    contact@trivalleyclinic.com
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <PhoneCall className="text-secondary" />
+                    (510) 598-4921
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <Printer className="text-secondary" />
+                    (510) 973-2393
+                  </div>
+                </div>
+
+                {/* Bottom Divider */}
+                <div className="absolute bg-contain bg-left bottom-0 left-10 w-full md:h-8 h-6  bg-no-repeat" style={{ backgroundImage: "url('/service/Minimalist-twig-divider.png')" }}></div>
               </div>
             </div>
-            <div>
-              <div className="flex items-center justify-center gap-2">
-                <PhoneCall className="text-secondary" />
-                (510) 598-4921
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center justify-center gap-2">
-                <Printer className="text-secondary" />
-                (510) 973-2393
-              </div>
-            </div>
-            <div></div>
+            <div
+              className="lg:col-span-5 col-span-12 inset-0 w-full h-[400px]
+              bg-cover  bg-center bg-no-repeat  
+               will-change-transform"
+              style={{ backgroundImage: "url('/bg-hero.jpg')" }}
+            ></div>
           </div>
-          {/* <Link target="_blank" href="https://calendly.com/d/4kd-jpr-6jx">
+        </div>
+        {/* <Link target="_blank" href="https://calendly.com/d/4kd-jpr-6jx">
             <Button size="lg" className="mx-auto">
               Book Demo
             </Button>
           </Link> */}
-        </div>
       </section>
 
       {ourLegacy && <About ourLegacy={ourLegacy || {}} coreDifferentiars={coreDifferentiars} loading={loading} />}

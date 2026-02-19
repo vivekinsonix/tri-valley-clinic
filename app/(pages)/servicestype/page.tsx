@@ -1,7 +1,7 @@
 'use client';
 
 import { get_case_studies_paginated } from '@/app/services/homePageService';
-import { Button, Card } from 'flowbite-react';
+import { Button, Card, HRText } from 'flowbite-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 type CaseStudy = {
@@ -88,7 +88,13 @@ export default function ServicesType() {
           <div className="container mx-auto text-center">
             <header className="mb-12">
               <p className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider"> What We Do</p>
-              <h1>Our Services</h1>
+              <div className="flex items-center justify-center  gap-4 my-0 relative">
+                <div className="h-[1px]  w-24 bg-secondary relative">
+                  <img className="w-10 absolute -right-2.5 -top-2.5 " src="/service/d-v.png" />
+                </div>
+                <h1 className="text-2xl font-bold text-gray-900">Our Services</h1>
+                <div className="h-[1px]  w-24 bg-secondary"></div>
+              </div>
             </header>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mt-10">
               {data.map((item: CaseStudy | any, idx: number) => {
