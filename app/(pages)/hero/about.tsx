@@ -85,7 +85,7 @@ export default function About({ ourLegacy, coreDifferentiars, loading }: Props) 
               </Link>
               <Link target="_blank" href="tel:(510) 598-4921">
                 <Button outline size="lg" className="mx-auto">
-                  Call/Text (510) 598-4921
+                  Call (510) 598-4921
                 </Button>
               </Link>
             </div>

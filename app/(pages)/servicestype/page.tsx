@@ -145,7 +145,7 @@ export default function ServicesType() {
                 return (
                   <Card key={idx} href={caseStudyUrl} title={caseStudyTitle} className={`p-6  text-center transition-all duration-300 rounded-2xl`}>
                     <div className="mb-4 flex justify-center">
-                      <img src={iconImage} className="w-10" />
+                      <img src={iconImage} className="w-12" />
                     </div>
 
                     <h3 className="text-xl font-semibold text-accent dark:text-accent">{caseStudyTitle}</h3>
