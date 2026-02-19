@@ -118,8 +118,8 @@ export default function Footer() {
           <div className="flex items-center md:justify-start justify-center gap-3 mt-0">
             <div>
               <div className="mb-2"></div>
-              <img src="/logo/try-valley-clinic-logo.png" alt="trv" width="180" className=" mb-2 dark:hidden " />
-              <img src="/logo/try-valley-clinic-logo.png" alt="tvc" width="180" className=" mb-2 hidden dark:block " />
+              <img src="/logo/tri-vallet-clinic-footer.png" alt="trv" width="180" className=" mb-2 dark:hidden " />
+              <img src="/logo/tri-vallet-clinic-footer.png" alt="tvc" width="180" className=" mb-2 hidden dark:block " />
               <p className="text-gray-300 mb-0 text-md leading-relaxed ">{footerData?.title}</p>
             </div>
           </div>
