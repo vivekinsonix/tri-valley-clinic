@@ -17,7 +17,7 @@ export default function Virtual({ ourLegacy }: Props) {
       className="relative h-[90vh] w-full bg-cover bg-center bg-no-repeat 
                  flex items-center justify-center bg-fixed"
       style={{
-        backgroundImage: "url('/bg-3.jpg')",
+        backgroundImage: "url('/bg-2.jpg')",
       }}
     >
       {/* Overlay */}
