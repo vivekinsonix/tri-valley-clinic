@@ -12,6 +12,8 @@ import { useDrawer } from './context/DrawerContext';
 import { get_home_page_data } from './services/homePageService';
 import { AboutResponse } from './utils/Interfaces';
 import ClinicHoursModern from './(pages)/hours/ClinicHours';
+import ClinicHero from './(pages)/Appointment/hero';
+import Virtual from './(pages)/virtual/virtual';
 
 let cachedHomeData: AboutResponse | null = null;
 
@@ -54,8 +56,10 @@ export default function Home() {
       {/* <ProjectsHome /> */}
 
       <ServicesType />
-      <PartnerAdvisoryCouncil />
       <Clients />
+      <PartnerAdvisoryCouncil />
+
+      <Virtual coreDifferentiars={undefined} loading={false} />
       <BlogsHomePage />
       {/* <Testimonials /> */}
     </main>

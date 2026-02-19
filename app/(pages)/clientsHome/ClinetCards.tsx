@@ -125,7 +125,7 @@ export default function CardSlider({ data = [] }: { data: CardItem[] }) {
     <section className="relative mx-auto mt-10 outline-none" tabIndex={0} role="region" aria-roledescription="carousel" aria-label="Featured items carousel">
       <div ref={sliderRef} onScroll={handleScroll} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} className="flex overflow-x-hidden snap-x snap-mandatory gap-4 pb-6 scrollbar-hide scroll-smooth">
         {data.map((card) => (
-          <div key={card.id} className="snap-start shrink-0 w-[320px] p-4 rounded-lg bg-white shadow-lg flex flex-col items-center">
+          <div key={card.id} className="snap-start shrink-0 w-[320px] p-2 rounded-lg bg-transparent  flex flex-col items-center">
             <Avatar img={getImageUrl(card)} size="xl" rounded={false} className="grayscale-50 w-44 cursor-pointer  hover:grayscale-0 transition" />
             <p className="mt-5 font-semibold text-center">{card.label}</p>
           </div>

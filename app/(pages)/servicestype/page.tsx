@@ -1,9 +1,12 @@
 'use client';
 
 import { get_case_studies_paginated } from '@/app/services/homePageService';
-import { Button, Card, HRText } from 'flowbite-react';
+import { getEmployee, getTeams } from '@/app/services/teamService';
+import { TeamSection } from '@/app/utils/Interfaces';
+import { Avatar, Button, Card, HRText } from 'flowbite-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+
 type CaseStudy = {
   documentId: string;
   main?: {
@@ -16,6 +19,17 @@ type CaseStudy = {
   cover_image?: string;
   icon_img?: string;
 };
+interface CardItem {
+  id: number;
+  label: string;
+  image?: {
+    url?: string;
+    formats?: {
+      thumbnail?: { url: string };
+      small?: { url: string };
+    };
+  };
+}
 function ServiceCardSkeleton() {
   return (
     <div className="animate-pulse w-full h-[350px] relative overflow-hidden rounded-lg bg-gray-700">
@@ -39,8 +53,9 @@ function ServiceCardSkeleton() {
 }
 
 let cachedCaseStudies: CaseStudy[] | null = null;
-
+let cachedTeams: TeamSection | null = null;
 export default function ServicesType() {
+  const [teams, setTeams] = useState<TeamSection | null>(cachedTeams);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<CaseStudy[]>([]);
   useEffect(() => {
@@ -65,7 +80,29 @@ export default function ServicesType() {
 
     fetchCaseStudies();
   }, []);
+  useEffect(() => {
+    if (cachedTeams) {
+      setTeams(cachedTeams);
+      setLoading(false);
+      return;
+    }
 
+    const fetchTeams = async () => {
+      try {
+        const response = await getTeams();
+        const data = response?.data || null;
+
+        cachedTeams = data;
+        setTeams(data);
+      } catch (error) {
+        console.error('Failed to fetch teams:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTeams();
+  }, []);
   if (loading) {
     return (
       <div className="p-5">
@@ -82,18 +119,19 @@ export default function ServicesType() {
       </div>
     );
   }
+  const getImageUrl = (card: CardItem) => card.image?.formats?.thumbnail?.url || card.image?.formats?.small?.url || card.image?.url || '';
   return (
     <>
       {!loading && data?.length > 0 && (
-        <section id="services" className="py-16 md:px-0 px-4 md:py-24 dark:bg-white bg-white">
-          <div className="container mx-auto text-center">
+        <section id="services" className="pt-16   md:pt-24 dark:bg-sectiontheme bg-sectiontheme">
+          <div className="container mx-auto text-center px-4 md:px-0">
             <header className="mb-12">
               <p className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider"> What We Do</p>
               <div className="flex items-center justify-center  gap-4 my-0 relative">
                 <div className="h-[1px]  w-24 bg-secondary relative">
                   <img className="w-10 absolute -right-2.5 -top-2.5 " src="/service/d-v.png" />
                 </div>
-                <h1 className="text-2xl font-bold text-gray-900">Our Services</h1>
+                <h1 className="font-bold text-gray-900">Our Services</h1>
                 <div className="h-[1px]  w-24 bg-secondary"></div>
               </div>
             </header>
@@ -129,6 +167,79 @@ export default function ServicesType() {
               View All Services →
             </Link>
           )}
+
+          <section className="relative bg-primary text-white py-24">
+            {/* Top Curve */}
+
+            <div
+              className="absolute top-0 h-12 left-0 w-full  overflow-hidden leading-[0] rotate-360 
+                
+              "
+              style={{ backgroundImage: "url('svgs/top-d.svg')" }}
+            />
+
+            <header className="my-12 text-center">
+              <p className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">Experienced Physicians </p>
+              <div className="flex items-center justify-center  gap-4 my-0 relative">
+                <div className="h-[1px]  w-24 bg-secondary relative">
+                  <img className="w-10 absolute -right-2.5 -top-2.5 " src="/service/d-v.png" />
+                </div>
+                <h1 className="font-bold !text-white dark:!text-white">Meet Our Doctors</h1>
+                <div className="h-[1px]  w-24 bg-secondary"></div>
+              </div>
+            </header>
+            <div className="container mx-auto  py-8 px-6 md:px-12 flex flex-col md:flex-row justify-center items-center gap-16 relative ">
+              {/* Stat 1 */}
+
+              <div className="text-center">
+                <div className="w-48 h-48 border-[4px] border-white rounded-full flex items-center justify-center text-4xl font-semibold">
+                  <Avatar img="/teams/dr_shabeg.jpg" rounded={true} size="2xl" className=" h-44 w-44" />
+                </div>
+                {/* Name */}
+                <h2 className="text-xl md:text-2xl font-bold">Dr. Shabeg S. Gondara</h2>
+
+                {/* Designation */}
+                <p className="text-gray-200">MD, Psychiatrist</p>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="text-center">
+                <div className="w-48 h-48 border-[4px] border-white rounded-full flex items-center justify-center text-4xl font-semibold">
+                  <Avatar img="/teams/dr_japsharan_gill.jpg" rounded={true} size="2xl" className=" h-44 w-44" />
+                </div>
+                {/* Name */}
+                <h2 className="text-xl md:text-2xl font-bold">Dr. Japsharan Gill</h2>
+
+                {/* Designation */}
+                <p className="text-sectiontheme">MD, Psychiatrist</p>
+              </div>
+            </div>
+
+            {/* Bottom Curve */}
+            <div className="text-center">
+              {loading ? (
+                <>
+                  <div className="h-8 w-72 bg-gray-200 rounded animate-pulse" />
+                  <div className="mt-6 space-y-3"></div>
+                  <div className="mt-8 w-40 h-5 bg-gray-200 rounded animate-pulse" />
+                </>
+              ) : teams ? (
+                <>
+                  {teams.link && (
+                    <Link href={teams.link} className="pt-4 inline-flex items-center gap-2 text-base font-medium text-white hover:text-white">
+                      <Button outline>Meet the physicians </Button>
+                    </Link>
+                  )}
+                </>
+              ) : null}
+            </div>
+            <div
+              className="absolute bottom-0 h-12 left-0 w-full z-20 overflow-hidden leading-[0] rotate-180 
+                
+              "
+              style={{ backgroundImage: "url('svgs/top-d.svg')" }}
+            />
+          </section>
         </section>
       )}
     </>

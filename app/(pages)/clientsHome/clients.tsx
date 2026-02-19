@@ -63,7 +63,7 @@ export default function Clients() {
   return (
     <>
       <SeoHead title="Our Clients - Dolcera" description="Discover the leading companies and enterprises that trust Dolcera for patent analytics solutions and IP management services." keywords="Dolcera clients, patent analytics clients, IP management partners, enterprise solutions" url={`${typeof window !== 'undefined' ? window.location.origin : ''}/clients`} />
-      <section id="clients" className="py-16 md:py-24 bg-white">
+      <section id="clients" className="pb-16 md:pb-24 bg-sectiontheme">
         <div className="px-6 mx-auto text-center">
           <p className="text-sm font-medium mb-2 uppercase tracking-wider">{clients.label}</p>
           <h1>{clients.description}</h1>

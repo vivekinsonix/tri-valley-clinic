@@ -22,7 +22,7 @@ let cachedClients: ClientsSection | null = null;
 
 const ClientCardSkeleton = () => {
   return (
-    <Card className="p-8 rounded-2xl border border-gray-100 dark:border-secondary-dark shadow-lg text-center">
+    <Card className="p-8 rounded-2xl border border-gray-100 dark:border-secondary-dark shadow-0 text-center">
       <div className="animate-pulse flex flex-col items-center">
         <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mb-4" />
         <div className="h-5 w-3/4 bg-gray-200 dark:bg-gray-700 rounded" />
@@ -77,7 +77,7 @@ export default function TeamPage() {
 
             {!loading &&
               clients?.card?.map((member: CardItem) => (
-                <Card key={member.id} className="p-8 rounded-2xl border border-gray-100 dark:border-secondary-dark shadow-lg text-center flex flex-col items-center transition-transform duration-300 hover:scale-[1.03]">
+                <Card key={member.id} className="p-8 rounded-2xl border border-gray-100 dark:border-secondary-dark text-center flex flex-col items-center transition-transform duration-300 hover:scale-[1.03]">
                   <Avatar img={getImageUrl(member)} rounded={false} size="xl" className="mb-4" />
 
                   <h2 className="text-xl md:text-2xl font-bold mb-3 leading-snug dark:text-primary">{member.label}</h2>

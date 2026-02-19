@@ -73,7 +73,7 @@ export default function PartnerAdvisoryCouncil() {
     <>
       <SeoHead title="Our Team & Advisors - Dolcera" description="Meet Dolcera's expert team and advisory council." keywords="Dolcera team, advisors, patent experts" url={`${typeof window !== 'undefined' ? window.location.origin : ''}/teamshome`} />
 
-      <section id="teams" className="  py-24 relative overflow-hidden bg-sectiontheme">
+      <section id="teams" className="  py-24 relative overflow-hidden bg-white">
         <div className="relative text-center mx-auto px-4">
           {loading ? (
             <>
@@ -83,62 +83,31 @@ export default function PartnerAdvisoryCouncil() {
           ) : teams ? (
             <>
               <header className="mb-12">
-                <p className="mb-2 text-sm font-medium uppercase tracking-wider text-gray-400">{teams.description}</p>
-                <h1>{teams.label}</h1>
+                <p className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider"> {teams.description}</p>
+                <div className="flex items-center justify-center  gap-4 my-0 relative">
+                  <div className="h-[1px]  w-24 bg-secondary relative">
+                    <img className="w-10 absolute -right-2.5 -top-2.5 " src="/service/d-v.png" />
+                  </div>
+                  <h1 className="font-bold text-gray-900">{teams.label}</h1>
+                  <div className="h-[1px]  w-24 bg-secondary"></div>
+                </div>
               </header>
             </>
           ) : null}
 
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 items-center text-left gap-20 lg:grid-cols-12">
+            <div className="grid grid-cols-1 items-center bg-sectiontheme text-left gap-0 lg:grid-cols-12">
               {/* LEFT CONTENT */}
-              <div className="md:col-span-5">
-                {loading ? (
-                  <>
-                    <div className="h-8 w-72 bg-gray-200 rounded animate-pulse" />
-                    <div className="mt-6 space-y-3">
-                      <TextSkeleton />
-                      <TextSkeleton width="w-5/6" />
-                      <TextSkeleton width="w-2/3" />
-                    </div>
-                    <div className="mt-8 w-40 h-5 bg-gray-200 rounded animate-pulse" />
-                  </>
-                ) : teams ? (
-                  <>
-                    <h3>{teams.h1}</h3>
-                    <p className="mt-6 max-w-xl text-md leading-relaxed">{teams.p1}</p>
-
-                    {teams.link && (
-                      <Link href={teams.link} className="mt-8 inline-flex items-center gap-2 text-base font-medium text-primary hover:text-primary-900">
-                        Meet the physicians <span className="text-xl">›</span>
-                      </Link>
-                    )}
-                  </>
-                ) : null}
-              </div>
+              <div
+                className="md:col-span-6 col-span-12 inset-0 w-full h-[400px]
+              bg-cover  bg-center bg-no-repeat  
+               will-change-transform"
+                style={{ backgroundImage: "url('/bg-clinic-hour.jpeg')" }}
+              ></div>
 
               {/* RIGHT GRID */}
-              <div className=" md:col-span-7 ">
+              <div className=" md:col-span-6">
                 <ClinicHoursModern />
-                {/* {loading
-                  ? Array.from({ length: 6 }).map((_, i) => <ImageSkeleton key={i} />)
-                  : advisors?.map((advisor: any, i) => {
-                     
-                      const rawImg = advisor?.image;
-
-                      const img = typeof rawImg === 'string' ? rawImg : (rawImg?.url ?? null);
-
-                      const hasImage = typeof img === 'string' && img.trim() !== '';
-
-                      const letter = advisor?.name?.charAt(0)?.toUpperCase() || '?';
-                      const colorClass = getColorForAdvisor(letter);
-
-                      return (
-                        <div key={i} className="relative aspect-square overflow-hidden rounded-2xl flex items-center justify-center">
-                          {hasImage ? <Image src={img} alt="Advisor" fill className="object-cover" /> : <div className={`w-full h-full flex items-center justify-center text-white text-3xl font-bold ${colorClass}`}>{letter}</div>}
-                        </div>
-                      );
-                    })} */}
               </div>
             </div>
           </div>
