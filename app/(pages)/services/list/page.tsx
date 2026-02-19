@@ -97,10 +97,11 @@ export default function Page() {
                 const caseStudyTitle = item?.main?.title || 'Case Study';
                 const caseStudyDescription = item?.main?.sub_title || 'Case Study';
                 const caseStudyImage = item?.main?.cover_image?.url || '/tech.jpg';
+                const iconImage = item?.main?.icon_img?.url || '/tech.jpg';
                 return (
                   <Card key={idx} href={caseStudyUrl} title={caseStudyTitle} className={`p-6  text-center transition-all duration-300 rounded-2xl`}>
                     <div className="mb-4 flex justify-center">
-                      <img src="/service/brainstorm.png" className="w-10" />
+                      <img src={iconImage} className="w-10" />
                     </div>
 
                     <h3 className="text-xl font-semibold text-accent dark:text-accent">{caseStudyTitle}</h3>
