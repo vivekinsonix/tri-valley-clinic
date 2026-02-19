@@ -16,23 +16,24 @@ export default function ClinicHoursModern() {
   ];
 
   return (
-    <div className="rounded-3xl bg-sectiontheme  hover:dark:!sectiontheme px-4">
+    <div className="rounded-3xl bg-sectiontheme  hover:dark:!sectiontheme p-2">
       {/* Header */}
       <div className="md:flex flex-wrap items-center md:justify-end"></div>
       <div className="flex items-center justify-between mb-10">
-        <div className="flex items-center gap-4">
-          <CalendarClock className="w-10 h-10 text-secondary " />
+        <div className="flex items-center gap-4 relative">
+          <div className="w-7 text-secondary " />
           <div>
             <p className="text-lg text-gray-900">Clinic Hours</p>
             <p className="text-gray-500 text-sm">We are here to care for you</p>
           </div>
+          <div className="w-full absolute left-0 h-16 bg-left bg-no-repeat" style={{ backgroundImage: "url('/service/top.png')" }}></div>
         </div>
-        <Badge color="success" className="text-sm px-4 py-1 rounded-full">
+        <Badge color="success" className="text-sm md:px-4 py-1 rounded-full text-nowrap">
           Open on Weekdays
         </Badge>
       </div>
       {/* Hours Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-5 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-5 px-4 ">
         {hours.map((item, index) => (
           <div key={index} className="flex items-center justify-between py-3 border-b border-bordertheme last:border-b-0">
             <span className="text-primary tracking-wide">{item.day}</span>

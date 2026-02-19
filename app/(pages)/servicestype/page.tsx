@@ -217,21 +217,9 @@ export default function ServicesType() {
 
             {/* Bottom Curve */}
             <div className="text-center">
-              {loading ? (
-                <>
-                  <div className="h-8 w-72 bg-gray-200 rounded animate-pulse" />
-                  <div className="mt-6 space-y-3"></div>
-                  <div className="mt-8 w-40 h-5 bg-gray-200 rounded animate-pulse" />
-                </>
-              ) : teams ? (
-                <>
-                  {teams.link && (
-                    <Link href={teams.link} className="pt-4 inline-flex items-center gap-2 text-base font-medium text-white hover:text-white">
-                      <Button outline>Meet the physicians </Button>
-                    </Link>
-                  )}
-                </>
-              ) : null}
+              <Link href="/doctors" className="pt-4 inline-flex items-center gap-2 text-base font-medium text-white hover:text-white">
+                <Button outline>Meet the physicians </Button>
+              </Link>
             </div>
             <div
               className="absolute bottom-0 h-12 left-0 w-full z-20 overflow-hidden leading-[0] rotate-180 

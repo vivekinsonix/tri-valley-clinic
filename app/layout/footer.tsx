@@ -185,7 +185,7 @@ export default function Footer() {
             Blog
           </Link>
 
-          <Link href={`${process.env.NEXT_PUBLIC_BASE_URL || 'https:dolcera.insonix.com'}/sitemap.xml`} style={{ cursor: 'pointer' }} className="hover:underline">
+          <Link href={`${process.env.NEXT_PUBLIC_BASE_URL || 'https:trivalleyclinic.com'}/sitemap.xml`} style={{ cursor: 'pointer' }} className="hover:underline">
             Sitemap
           </Link>
           <NewsletterModal />
@@ -193,9 +193,8 @@ export default function Footer() {
 
         {/* How-to-contact section */}
         <div className="!text-white text-center md:text-left">
-          <h3 className=" mb-3 text-white !text-white ">Visit Us</h3>
-          <p className="text-gray-300 mb-1">TRI-VALLEY CLINIC</p>
-          <p>680 Mowry Avenue Fremont, CA 94536</p>
+          <p className="text-white mb-1 text-sm">TRI-VALLEY CLINIC</p>
+          <p className="font-normal text-sm">680 Mowry Avenue Fremont, CA 94536</p>
         </div>
       </div>
 

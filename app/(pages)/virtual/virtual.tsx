@@ -17,11 +17,11 @@ export default function Virtual({ ourLegacy }: Props) {
       className="relative h-[90vh] w-full bg-cover bg-center bg-no-repeat 
                  flex items-center justify-center bg-fixed"
       style={{
-        backgroundImage: "url('/bg-1.jpg')",
+        backgroundImage: "url('/bg-3.jpg')",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-primarypink/50 backdrop-blur-[1px]" />
+      <div className="absolute inset-0 bg-primary/60 backdrop-blur-[1px]" />
 
       {/* Content */}
       <div className="relative  text-center max-w-3xl px-4">
@@ -37,10 +37,10 @@ export default function Virtual({ ourLegacy }: Props) {
           </div>
 
           {/* Heading */}
-          <h1 className=" font-normal text-accent headingclass">Schedule Your Appointment.</h1>
+          <h1 className=" font-normal !text-white dark:!text-white">Schedule Your Appointment.</h1>
 
           {/* Sub Text */}
-          <p className="text-primary leading-relaxed text-lg">For your convenience and safety, Tri-Valley Clinic offers secure virtual visits. Receive high-quality care from the comfort of your home. Contact us today to schedule your telehealth appointment.</p>
+          <p className="text-white font-normal ">For your convenience and safety, Tri-Valley Clinic offers secure virtual visits. Receive high-quality care from the comfort of your home. Contact us today to schedule your telehealth appointment.</p>
 
           {/* Buttons */}
           <div className="flex flex-col mx-auto sm:flex-row justify-center gap-4 pt-4">
