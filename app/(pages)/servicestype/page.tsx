@@ -150,7 +150,7 @@ export default function ServicesType() {
 
                     <h3 className="text-xl font-semibold text-accent dark:text-accent">{caseStudyTitle}</h3>
 
-                    <p className="mt-3 text-accent dark:text-accent line-clamp-2 text-sm leading-relaxed">{caseStudyDescription}</p>
+                    <p className="my-3 text-accent dark:text-accent line-clamp-2 text-sm leading-relaxed">{caseStudyDescription}</p>
                     <div className="mx-auto">
                       <Button outline size="md">
                         Learn More
@@ -168,7 +168,7 @@ export default function ServicesType() {
             </Link>
           )}
 
-          <section className="relative bg-primary text-white py-24">
+          <section id="doctors" className="relative bg-primary text-white py-24">
             {/* Top Curve */}
 
             <div
@@ -222,7 +222,7 @@ export default function ServicesType() {
               </Link>
             </div>
             <div
-              className="absolute bottom-0 h-12 left-0 w-full z-20 overflow-hidden leading-[0] rotate-180 
+              className="absolute -bottom-0.5 h-12 left-0 w-full z-20 overflow-hidden leading-[0] rotate-180 
                 
               "
               style={{ backgroundImage: "url('svgs/top-d.svg')" }}

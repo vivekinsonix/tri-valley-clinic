@@ -106,7 +106,7 @@ export default function Page() {
 
                     <h3 className="text-xl font-semibold text-accent dark:text-accent">{caseStudyTitle}</h3>
 
-                    <p className="mt-3 text-accent dark:text-accent line-clamp-2 text-sm leading-relaxed">{caseStudyDescription}</p>
+                    <p className="my-3 text-accent dark:text-accent line-clamp-2 text-sm leading-relaxed">{caseStudyDescription}</p>
                     <div className="mx-auto">
                       <Button outline size="md">
                         Learn More

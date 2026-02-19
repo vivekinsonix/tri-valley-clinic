@@ -117,15 +117,15 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
                 <div className="w-full absolute left-0 h-16 bg-left bg-no-repeat" style={{ backgroundImage: "url('/service/top.png')" }}></div>
 
                 {/* Heading */}
-                <h1 className="text-2xl md:text-3xl font-serif text-primary mb-4 flex items-center gap-2">
-                  <span className="text-secondary font-semibold">Our</span> Mission
+                <h1 className="  text-primary mb-4 flex items-center gap-2">
+                  <span className="text-secondary ">Our</span> Mission
                 </h1>
 
                 {/* Paragraph */}
-                <p className="w-full font-serif text-primary leading-relaxed">{subHeading}</p>
+                <p className="w-full font-weight-[300] text-primary ">{subHeading}</p>
 
                 {/* Contact Details */}
-                <div className="space-y-3 mt-6 text-primary font-serif text-[16px]">
+                <div className="space-y-3 mt-6 text-primary  ">
                   <div className="flex items-center gap-2">
                     <Mail className="text-secondary" />
                     contact@trivalleyclinic.com

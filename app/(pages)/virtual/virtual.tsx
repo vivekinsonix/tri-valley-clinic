@@ -40,7 +40,7 @@ export default function Virtual({ ourLegacy }: Props) {
           <h1 className=" font-normal !text-white dark:!text-white">Schedule Your Appointment.</h1>
 
           {/* Sub Text */}
-          <p className="text-white font-normal ">For your convenience and safety, Tri-Valley Clinic offers secure virtual visits. Receive high-quality care from the comfort of your home. Contact us today to schedule your telehealth appointment.</p>
+          <p className="text-white ">For your convenience and safety, Tri-Valley Clinic offers secure virtual visits. Receive high-quality care from the comfort of your home. Contact us today to schedule your telehealth appointment.</p>
 
           {/* Buttons */}
           <div className="flex flex-col mx-auto sm:flex-row justify-center gap-4 pt-4">

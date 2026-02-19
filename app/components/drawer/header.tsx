@@ -64,8 +64,11 @@ const Header: React.FC = () => {
           <div className="hidden md:flex gap-8 items-center">
             <CaseStudiesDropdown openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} setIsMenuOpen={() => setIsMenuOpen(false)} />
 
-            <Link href="/doctors" className={` ${navTextColor} hover:text-secondary`}>
+            <Link href="/#doctors" className={` ${navTextColor} hover:text-secondary`}>
               Doctors
+            </Link>
+            <Link href="/#Insurances" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
+              Insurances
             </Link>
             <Link href="/#teams" className={` ${navTextColor} hover:text-secondary`}>
               Clinic Hours
@@ -101,8 +104,11 @@ const Header: React.FC = () => {
         <NavbarCollapse className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden text-center px-3`}>
           <CaseStudiesDropdown openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} setIsMenuOpen={() => setIsMenuOpen(false)} />
 
-          <Link href="/doctors" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
+          <Link href="/#doctors" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
             Doctors
+          </Link>
+          <Link href="/#Insurances" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
+            Insurances
           </Link>
           <Link href="/#teams" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
             Clinic Hours

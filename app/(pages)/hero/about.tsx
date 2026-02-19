@@ -65,13 +65,12 @@ export default function About({ ourLegacy, coreDifferentiars, loading }: Props) 
       <main id="about" className=" py-16 dark:bg-foreground " aria-labelledby="about-heading">
         <div className="container mx-auto px-4 text-center">
           <header className="mb-4">
-            <p className="mb-2 text-sm font-medium tracking-wider  text-gray-400 uppercase" aria-label="Section name">
-              {ourLegacy?.section_name}
-            </p>
-
             <h1 id="about-heading" aria-describedby="about-description">
               {ourLegacy?.heading}
             </h1>
+            <p className="mb-2 text-xl font-normal tracking-wider  text-primary " aria-label="Section name">
+              {ourLegacy?.section_name}
+            </p>
           </header>
 
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-1">

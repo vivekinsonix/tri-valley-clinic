@@ -6,6 +6,7 @@ import { ClientsSection } from '@/app/utils/Interfaces';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import CardSlider from './ClinetCards';
+import Insurances from '../insurance/Insurances';
 
 const ClientsSkeleton = () => {
   return (
@@ -63,11 +64,13 @@ export default function Clients() {
   return (
     <>
       <SeoHead title="Our Clients - Dolcera" description="Discover the leading companies and enterprises that trust Dolcera for patent analytics solutions and IP management services." keywords="Dolcera clients, patent analytics clients, IP management partners, enterprise solutions" url={`${typeof window !== 'undefined' ? window.location.origin : ''}/clients`} />
-      <section id="clients" className="pb-16 md:pb-24 bg-sectiontheme">
+      <section id="Insurances" className="pb-16 md:pb-24 bg-sectiontheme">
         <div className="px-6 mx-auto text-center">
-          <p className="text-sm font-medium mb-2 uppercase tracking-wider">{clients.label}</p>
-          <h1>{clients.description}</h1>
-          <CardSlider data={clients.card || []} />
+          <h1> {clients.label}</h1>
+          <p className="text-sm font-normal mb-2  tracking-wider">{clients.description}</p>
+
+          <Insurances />
+          {/* <CardSlider data={clients.card || []} /> */}
         </div>
         {/* <Link href="/clients" className="mt-10 mx-auto text-center text-primary w-full inline-block hover:underline">
           View All Clients →

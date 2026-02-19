@@ -103,6 +103,9 @@ h6 {
   h6 {
     @apply text-base font-medium;
   }
+  p {
+    @apply font-stretch-normal;
+  }
 }
 
 .prose strong {
