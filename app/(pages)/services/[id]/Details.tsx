@@ -91,7 +91,7 @@ const PAGE_HEADER = React.memo(function PageHeader({ activeSection, sections, on
   }, []);
 
   return (
-    <nav className="sticky sm:top-16 md:top-22 top-22  bg-gradient-to-t from-cardlight via-cardlight to-white list-none shadow-lg  " aria-label="Section Navigation" style={{ zIndex: 8 }}>
+    <nav className="sticky sm:top-16 md:top-21 top-21  bg-gradient-to-t from-cardlight via-cardlight to-white list-none shadow-lg  " aria-label="Section Navigation" style={{ zIndex: 8 }}>
       <div className="container mx-auto  md:px-0 px-4 overflow-auto">
         <ul className="text-md flex gap-3 py-3 font-semibold md:gap-6">
           {sections.map((s) => (
@@ -174,7 +174,7 @@ export default function Details({ id }: { id: string }) {
   const seoImage = data?.seo?.metaImage || data?.main?.cover_image || '/default-og.jpg.png';
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 dark:bg-white dark:text-black">
+    <div className="min-h-screen bg-white text-slate-900 dark:bg-white dark:text-s">
       <SeoHead title={seoTitle} description={seoDescription} keywords={seoKeywords} url={seoUrl} image={seoImage} />
       <MAIN content={data?.main || {}} loading={loading} />
       {sections.length > 0 && <PAGE_HEADER activeSection={activeSection} sections={sections} onSelect={setActiveSection} />}
