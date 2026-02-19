@@ -52,7 +52,7 @@ export default function Virtual({ ourLegacy }: Props) {
 
             <Link target="_blank" href="tel:(510) 598-4921">
               <Button outline size="lg" className="px-8 mx-auto w-full py-3 text-lg font-semibold shadow-md">
-                Call/Text (510) 598-4921
+                Call (510) 598-4921
               </Button>
             </Link>
           </div>
