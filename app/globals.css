@@ -51,7 +51,7 @@ h6 {
 @theme inline {
   /* Base colors */
   --color-background: #ffffff;
-  --color-foreground: #ffffff;
+  --color-foreground: #f4f6f8;
   --color-body: #faf9f5;
 
   /* Primary */

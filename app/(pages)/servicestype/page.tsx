@@ -172,7 +172,7 @@ export default function ServicesType() {
             {/* Top Curve */}
 
             <div
-              className="absolute top-0 h-12 left-0 w-full  overflow-hidden leading-[0] rotate-360 
+              className="absolute md:top-0 -top-0.5  h-12 left-0 w-full  overflow-hidden leading-[0] rotate-360 
                 
               "
               style={{ backgroundImage: "url('svgs/top-d.svg')" }}

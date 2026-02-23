@@ -62,7 +62,7 @@ export default function About({ ourLegacy, coreDifferentiars, loading }: Props) 
   return (
     <>
       <SeoHead title={ourLegacy?.heading} description={ourLegacy?.paragraph_1} image={ourLegacy?.og_image?.url || undefined} url={ourLegacy?.url || undefined} />
-      <main id="about" className=" py-16 dark:bg-foreground " aria-labelledby="about-heading">
+      <main id="about" className=" py-16 dark:bg-white bg-white " aria-labelledby="about-heading">
         <div className="container mx-auto px-4 text-center">
           <header className="mb-4">
             <h1 id="about-heading" aria-describedby="about-description">

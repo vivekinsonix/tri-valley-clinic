@@ -14,6 +14,8 @@ import { AboutResponse } from './utils/Interfaces';
 import ClinicHoursModern from './(pages)/hours/ClinicHours';
 import ClinicHero from './(pages)/Appointment/hero';
 import Virtual from './(pages)/virtual/virtual';
+import OfficeHours from './(pages)/office-hour/OfficeHour';
+import FAQs from './(pages)/FAQ/page';
 
 let cachedHomeData: AboutResponse | null = null;
 
@@ -56,9 +58,11 @@ export default function Home() {
       {/* <ProjectsHome /> */}
 
       <ServicesType />
-      <Clients />
-      <PartnerAdvisoryCouncil />
 
+      {/* <PartnerAdvisoryCouncil /> */}
+      <Clients />
+      <OfficeHours />
+      <FAQs />
       <Virtual coreDifferentiars={undefined} loading={false} />
       <BlogsHomePage />
       {/* <Testimonials /> */}

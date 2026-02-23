@@ -78,7 +78,7 @@ const Header: React.FC = () => {
               Our Clients
             </Link> */}
 
-            <Link href="/faqs" className={` ${navTextColor} hover:text-secondary`}>
+            <Link href="/#faq" className={` ${navTextColor} hover:text-secondary`}>
               FAQs
             </Link>
             <Link href="/blogs" className={` ${navTextColor} hover:text-secondary`}>
