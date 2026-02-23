@@ -70,7 +70,7 @@ const Header: React.FC = () => {
             <Link href="/#Insurances" onClick={() => setIsMenuOpen(false)} className={`inline-block text-left mt-3   pb-4 ${navTextColor} hover:text-primary`}>
               Insurances
             </Link>
-            <Link href="/#teams" className={` ${navTextColor} hover:text-secondary`}>
+            <Link href="/#clinichours" className={` ${navTextColor} hover:text-secondary`}>
               Clinic Hours
             </Link>
             {/* <ClientInfo openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} setIsMenuOpen={() => setIsMenuOpen(false)} /> */}

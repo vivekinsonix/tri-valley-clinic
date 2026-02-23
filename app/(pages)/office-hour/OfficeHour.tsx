@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function OfficeHours() {
   return (
     <>
-      <main id="about" className=" dark:bg-foreground " aria-labelledby="about-heading">
+      <main id="clinichours" className=" dark:bg-foreground " aria-labelledby="about-heading">
         <section
           id="doctors"
           className="relative py-24 w-full bg-cover bg-center bg-no-repeat text-white dark:text-white
@@ -26,7 +26,7 @@ export default function OfficeHours() {
             style={{ backgroundImage: "url('svgs/top-d.svg')" }}
           />
 
-          <header className="mb-12 text-center">
+          <header className="my-12 text-center">
             <p className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">TRY-VALLEY CLINIC </p>
             <div className="flex items-center justify-center  gap-4 my-0 relative">
               <div className="h-[1px]  w-24 bg-secondary relative">
@@ -56,7 +56,7 @@ export default function OfficeHours() {
           </div>
 
           {/* Bottom Curve */}
-          <div className="text-center py-8">
+          <div className="text-center pb-12">
             <Link target="_blank" href="tel:(510) 598-4921">
               <Button outline size="lg" className="px-8 mx-auto  py-3 text-lg font-semibold shadow-md">
                 Call (510) 598-4921
@@ -64,7 +64,7 @@ export default function OfficeHours() {
             </Link>
           </div>
           <div
-            className="absolute -bottom-0.5 h-12 left-0 w-full z-20 overflow-hidden leading-[0] rotate-180 
+            className="absolute -bottom-0.5 h-12 left-0 w-full  overflow-hidden leading-[0] rotate-180 
                 
               "
             style={{ backgroundImage: "url('svgs/top-d.svg')" }}
