@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: 'What are the clinic hours?',
-    answer: 'Our clinic is open Monday to Friday from 9:30 AM – 5:30 PM and Saturday and sunday closed.',
+    answer: 'Our clinic is open Monday to Friday from 9:30 AM – 5:30 PM and Saturday/Sunday closed.',
   },
 ];
 
