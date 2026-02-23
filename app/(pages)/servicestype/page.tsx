@@ -216,9 +216,11 @@ export default function ServicesType() {
             </div>
 
             {/* Bottom Curve */}
-            <div className="text-center">
-              <Link href="/doctors" className="pt-4 inline-flex items-center gap-2 text-base font-medium text-white hover:text-white">
-                <Button outline>Meet the physicians </Button>
+            <div className="text-center pb-12">
+              <Link target="_blank" href="/doctors">
+                <Button outline size="lg" className="px-8 mx-auto  py-3 text-lg font-semibold shadow-md">
+                  Meet the physicians
+                </Button>
               </Link>
             </div>
             <div
