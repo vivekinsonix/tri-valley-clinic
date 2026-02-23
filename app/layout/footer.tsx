@@ -7,7 +7,7 @@ import NewsletterModal from '../(pages)/newsletter/news-letter';
 import ResponsibleDisclosureModal from '../components/responsible-disclosure/ResponsibleDisclosureModal';
 import CookiePreferencesModal from '../cookie-preferences/CookiePreferencesModal';
 import { apiClient } from '../services/apiService';
-import { Facebook, FacebookIcon, Instagram, Linkedin } from 'lucide-react';
+import { ArrowRight, Facebook, FacebookIcon, Instagram, Linkedin } from 'lucide-react';
 
 const FollowIcons = React.memo(() => {
   const openLink = useCallback((url: string) => {
@@ -262,7 +262,9 @@ export default function Footer() {
               {/* Email Input */}
               <div className="bg-white flex items-center px-4 py-3 rounded-full w-full max-w-md">
                 <input type="email" placeholder="Your Best Email" className="w-full outline-none text-black" />
-                <button className="p-2 w-8 cursor-pointer hover:bg-primary/90 h-8 flex items-center justify-center rounded-full bg-primary text-secondary">→</button>
+                <button className="p-2 w-8 cursor-pointer hover:bg-primary/90 h-8 flex items-center justify-center rounded-full bg-primary text-secondary">
+                  <ArrowRight />
+                </button>
               </div>
             </div>
           </div>
