@@ -6,7 +6,7 @@ import { Plus, Minus } from 'lucide-react';
 const faqs = [
   {
     question: 'What services does your clinic provide?',
-    answer: 'We offer a wide range of healthcare services including primary care, IV hydration therapy, mental health support, preventive medicine, and chronic condition management.',
+    answer: 'We offer a wide range of healthcare services including Psychiatry, IV hydration therapy, mental health support, Medical Weight Management, Attention Deficit/Hyperactivity Disorder,Trauma and Stress, Psychosis and Anxiety,  and Bipolar Disorder.',
   },
   {
     question: 'How can I book an appointment?',
