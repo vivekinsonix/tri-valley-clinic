@@ -6,7 +6,7 @@ import { Plus, Minus } from 'lucide-react';
 const faqs = [
   {
     question: 'What services does your clinic provide?',
-    answer: 'We offer a wide range of healthcare services including primary care, mental health support, preventive medicine, and chronic condition management.',
+    answer: 'We offer a wide range of healthcare services including primary care, IV hydration therapy, mental health support, preventive medicine, and chronic condition management.',
   },
   {
     question: 'How can I book an appointment?',
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: 'What are the clinic hours?',
-    answer: 'Our clinic is open Monday to Friday from 9:00 AM – 6:00 PM and Saturdays from 10:00 AM – 2:00 PM.',
+    answer: 'Our clinic is open Monday to Friday from 9:30 AM – 5:30 PM and Saturday and sunday closed.',
   },
 ];
 
