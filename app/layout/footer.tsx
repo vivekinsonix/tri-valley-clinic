@@ -225,7 +225,7 @@ export default function Footer() {
               </div>
 
               {/* Address */}
-              <div className="flex justify-between gap-8">
+              <div className="md:flex justify-between gap-8">
                 <div className="mb-6">
                   <h5 className="!text-secondary font-bold tracking-wide">Address</h5>
                   <p className="text-gray-300 mt-1">680 Mowry Avenue Fremont, CA 94536</p>
@@ -270,14 +270,16 @@ export default function Footer() {
 
         {/* BOTTOM FOOTER BAR */}
         <div className="bg-black text-gray-400 py-4 text-sm flex flex-col md:flex-row justify-center items-center px-6">
-          <div className="flex gap-4 my-2 md:my-0">
-            <p>© 2026 Tri Valley Clinic All Rights reserved</p> |
+          <div className="md:flex gap-4 my-2 md:my-0">
+            <p className="mb-2 md:mb-0">© 2026 Tri Valley Clinic All Rights reserved</p> <span className=" hidden md:inline-block">|</span>
             <a href="/privacypolicy" className="cursor-pointer hover:text-white">
               Privacy Policy
             </a>
+            <span className=" inline-block md:hidden px-2">|</span>
             <a href="/paymentpolicy" className="cursor-pointer hover:text-white">
               Payment Policy
             </a>{' '}
+            <span className=" inline-block px-2 md:hidden">|</span>
             <span className="cursor-pointer hover:text-white">Sitemap</span>
           </div>
         </div>
