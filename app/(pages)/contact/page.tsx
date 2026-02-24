@@ -216,12 +216,12 @@ export default function ContactPage() {
             <p className="text-slate-600 max-w-md my-6">Our practice is led by highly skilled and experienced physicians devoted to delivering the highest standard of care</p>
 
             <div className="space-y-4 mb-10">
-              <a href="tel:+917207050832" className="flex items-center gap-3 cursor-pointer">
+              <a href="tel:+917207050832" className="flex items-center gap-3 cursor-pointer hover:text-secondary">
                 <PhoneCall className="text-primary" />
                 <span>(510) 598-4921</span>
               </a>
 
-              <a href="mailto:info@dolcera.com" className="flex items-center gap-3 cursor-pointer">
+              <a href="mailto:contact@trivalleyclinic.com" className="flex items-center hover:text-secondary gap-3 cursor-pointer">
                 <Mail className="text-primary" />
                 <span> contact@trivalleyclinic.com</span>
               </a>
