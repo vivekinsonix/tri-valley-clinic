@@ -192,8 +192,10 @@ export default function ServicesType() {
               {/* Stat 1 */}
 
               <div className="text-center">
-                <div className="w-48 h-48 border-[4px] border-white rounded-full flex items-center justify-center text-4xl font-semibold">
-                  <Avatar img="/teams/dr_shabeg.jpg" rounded={true} size="2xl" className=" h-44 w-44" />
+                <div className="flex justify-center">
+                  <div className="w-48 h-48 border-[4px] border-white rounded-full flex  items-center justify-center text-4xl font-semibold">
+                    <Avatar img="/teams/Dr-Shabeg-S-Gondara.jpg" rounded={true} size="2xl" className=" h-44 w-44" />
+                  </div>
                 </div>
                 {/* Name */}
                 <h2 className="text-xl md:text-2xl font-bold">Dr. Shabeg S. Gondara</h2>
@@ -204,8 +206,10 @@ export default function ServicesType() {
 
               {/* Stat 2 */}
               <div className="text-center">
-                <div className="w-48 h-48 border-[4px] border-white rounded-full flex items-center justify-center text-4xl font-semibold">
-                  <Avatar img="/teams/dr_japsharan_gill.jpg" rounded={true} size="2xl" className=" h-44 w-44" />
+                <div className="flex justify-center">
+                  <div className="w-48 h-48 border-[4px] border-white rounded-full flex items-center justify-center text-4xl font-semibold">
+                    <Avatar img="/teams/Dr-Japsharan-Gill.jpg" rounded={true} size="2xl" className=" h-44 w-44" />
+                  </div>
                 </div>
                 {/* Name */}
                 <h2 className="text-xl md:text-2xl font-bold">Dr. Japsharan Gill</h2>

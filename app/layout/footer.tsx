@@ -228,19 +228,21 @@ export default function Footer() {
               <div className="md:flex justify-between gap-8">
                 <div className="mb-6">
                   <h5 className="!text-secondary font-bold tracking-wide">Address</h5>
-                  <p className="text-gray-300 mt-1">680 Mowry Avenue Fremont, CA 94536</p>
+                  <Link className="flex items-center gap-2 hover:text-secondary" target="_blank" href="https://maps.app.goo.gl/GGFq49PwtxR4EGjAA">
+                    <p className="text-gray-300 hover:text-secondary mt-1">680 Mowry Avenue Fremont, CA 94536</p>
+                  </Link>
                 </div>
 
                 {/* Email */}
                 <div className="mb-6">
                   <h5 className="!text-secondary font-bold tracking-wide">EMAIL</h5>
-                  <p className="text-gray-300 mt-1"> contact@trivalleyclinic.com</p>
+                  <Link className="flex items-center gap-2 hover:text-secondary" target="_blank" href="mailto:contact@trivalleyclinic.com">
+                    <p className="text-gray-300 hover:text-secondary mt-1"> contact@trivalleyclinic.com</p>
+                  </Link>
                 </div>
               </div>
               {/* Social Icons */}
-              <div className="flex gap-4 my-6">
-                <FollowIcons />
-              </div>
+              <div className="flex gap-4 my-6">{/* <FollowIcons /> */}</div>
             </div>
           </div>
 

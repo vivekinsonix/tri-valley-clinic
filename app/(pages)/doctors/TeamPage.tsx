@@ -82,7 +82,7 @@ export default function TeamPage() {
             <p className="mt-2 text-gray-400">Our practice is led by dedicated and experienced physicians committed to providing the highest standard of care.</p>
           </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12 md:mt-16">
+          <div className="md:flex justify-items-center justify-center mx-auto gap-4 mt-12 md:mt-16">
             {loading
               ? Array.from({ length: 9 }).map((_, idx) => <TeamCardSkeleton key={idx} />)
               : teams.map((member: any) => {
@@ -90,9 +90,9 @@ export default function TeamPage() {
                   const bgColor = getColorForName(member?.name);
 
                   return (
-                    <Card key={member?.id} className={`p-6  text-center transition-all duration-300 rounded-2xl`}>
+                    <Card key={member?.id} className={`p-6  w-full max-w-sm mb-4  text-center transition-all duration-300 rounded-2xl`}>
                       {/* Avatar or Fallback */}
-                      {member?.image?.url ? <Avatar img={member.image.url} rounded size="xl" className="mb-2" /> : <div className={`w-30 h-30 flex items-center mx-auto justify-center rounded-full text-white text-3xl font-bold mb-4 ${bgColor}`}>{initial}</div>}
+                      {member?.image?.url ? <Avatar img={member.image.url} rounded size="xl" className="mb-2 " /> : <div className={`w-30 h-30 flex items-center mx-auto justify-center rounded-full text-white text-3xl font-bold mb-4 ${bgColor}`}>{initial}</div>}
 
                       {/* Social Links */}
                       {member?.social_links?.map((e: any) => (

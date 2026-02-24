@@ -29,6 +29,16 @@ const customTheme = createTheme({
     },
   },
 
+  avatar: {
+    root: {
+      size: {
+        xxl: 'w-28 h-28',
+      },
+      rounded: 'rounded-full border border-gray-200',
+      bordered: 'p-1 ring-2 ring-primary',
+    },
+  },
+
   button: {
     base: 'relative flex border-2 border-accent items-center justify-center rounded-none text-center font-normal focus:outline-none focus:ring-4',
     disabled: 'pointer-events-none opacity-50',

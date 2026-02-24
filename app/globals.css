@@ -25,7 +25,7 @@ h6 {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #2154ff #dee2e6;
+  scrollbar-color: rgb(159, 159, 161) #dee2e6;
 }
 
 /* WebKit (Chrome, Edge, Safari) */
@@ -44,7 +44,7 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2154ff;
+  background: #f4f6f8;
 }
 
 /* -------------------- Theme Variables -------------------- */

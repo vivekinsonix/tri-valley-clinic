@@ -128,17 +128,23 @@ export default function Hero({ subHeading, heading, loading, ourLegacy, coreDiff
                 <div className="space-y-3 mt-6 text-primary  ">
                   <div className="flex items-center gap-2">
                     <Mail className="text-secondary" />
-                    contact@trivalleyclinic.com
+                    <Link className="flex items-center gap-2 hover:text-secondary" target="_blank" href="mailto:contact@trivalleyclinic.com">
+                      contact@trivalleyclinic.com
+                    </Link>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <PhoneCall className="text-secondary" />
-                    (510) 598-4921
+                    <Link className="flex items-center gap-2 hover:text-secondary" target="_blank" href="tel:(510) 598-4921">
+                      (510) 598-4921
+                    </Link>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <Printer className="text-secondary" />
-                    (510) 973-2393
+                    <Link className="flex items-center gap-2 hover:text-secondary" target="_blank" href="tel:(510) 973-2393">
+                      (510) 973-2393
+                    </Link>
                   </div>
                 </div>
 
